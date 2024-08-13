@@ -1,5 +1,14 @@
 name: Go
-on: [push]
+on:
+  push:
+  pull_request:
+    branches:
+      - '*'
+    types:
+      - opened
+      - edited
+      - reopened
+      - synchronize
 jobs:
   build-legacy:
     name: Build Legacy
